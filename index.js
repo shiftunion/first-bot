@@ -49,7 +49,7 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Generic') {
+            if (text === 'goggles') {
                 sendGenericMessage(sender)
                 continue
             }
@@ -94,26 +94,26 @@ function sendGenericMessage(sender) {
             "payload": {
                 "template_type": "generic",
                 "elements": [{
-                    "title": "First card",
+                    "title": "Carb killer",
                     "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Glazed-Donut.jpg",
                     "buttons": [{
                         "type": "web_url",
-                        "url": "https://www.messenger.com",
+                        "url": "www.holis.com",
                         "title": "web url"
                     }, {
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "title": "Order these for $60",
+                        "payload": "Order doughnuts #1",
                     }],
                 }, {
-                    "title": "Second card",
+                    "title": "Sickly sweet",
                     "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/81/Zeppula.jpg",
                     "buttons": [{
                         "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
+                        "title": "Order this for 0.99 cents",
+                        "payload": "Order doughnuts #2",
                     }],
                 }]
             }
