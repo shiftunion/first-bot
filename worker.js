@@ -32,11 +32,7 @@ function getFormattedDate() {
     min = (min < 10 ? "0" : "") + min;
     sec = (sec < 10 ? "0" : "") + sec;
 
-    var str = date.getFullYear() + "-" + month + "-" + day + " " +  hour + ":" + min + " " + sec +"s";
-
-    /*alert(str);*/
-
-    return str;
+    return date.getFullYear() + "-" + month + "-" + day + " " +  hour + ":" + min + " " + sec +"s";
 }
 
 exports.start = workathon;
