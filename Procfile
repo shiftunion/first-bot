@@ -1,3 +1,3 @@
 web: node index.js
-worker: node bot.js
+worker: node worker.js
 clock: node clock.js

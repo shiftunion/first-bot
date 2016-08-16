@@ -7,7 +7,7 @@ var CronJob = require('cron').CronJob;
 var worker = require('./worker.js');
 
 var job = new CronJob({
-    cronTime: "0 0 */4 * * *",
+    cronTime: "*/5 * * * * *",
     onTick: worker.start(),
     start: true,
     timeZone: "Pacific/Auckland"
