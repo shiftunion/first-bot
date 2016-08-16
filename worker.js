@@ -2,7 +2,7 @@ var request = require('request');
 
 var myJSONObject = {
     "recipient": {"id": "1255533624481471"},
-    "message": {"text": "hello, dude! do you want to get fat @ " + getFormattedDate()}
+    "message": {"text": "hello, dude! do you want to get fat @ " + getFormattedDate}
 };
 
 function workathon() {
@@ -33,7 +33,7 @@ function getFormattedDate() {
     sec = (sec < 10 ? "0" : "") + sec;
 
     return date.getFullYear() + "-" + month + "-" + day + " " +  hour + ":" + min + " " + sec +"s";
-}
+};
 
 exports.start = workathon;
 
