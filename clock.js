@@ -8,7 +8,7 @@ var timeZone = "Pacific/Auckland";
 
 
 var CronJob = require('cron').CronJob;
-new CronJob('0 0 */3 * * *', function() {
+new CronJob('0 */12 * * * *', function() {
     worker.start();
 }, function(){ console.log('finished cron')}
 
