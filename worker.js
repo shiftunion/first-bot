@@ -1,11 +1,12 @@
 var request = require('request');
+var payload = require('./messagePayloads.js');
 
 function workathon() {
 
-var myJSONObject = {
-    "recipient": {"id": "1255533624481471"},
-    "message": {"text": "hello, dude! do you want to get fat @ " + getFormattedDate()}
-};
+    var myJSONObject = {
+        "recipient": {"id": "1255533624481471"},
+        "message": payload.eveningInspiration
+    };
 
     request({
         url: "https://graph.facebook.com/v2.6/me/messages?access_token=EAALI023ztRYBAFkiqGCcjrkB04OZALVagcZB1zOXT8h7o5SwEpPFzKrMtei9YpWlCxRomvC3Jz0F5yPYBlSwYimdQA9EvClrOvTaZCJhqYRpZByMBiI1wQsL1dV5slQZC4JudI82uCZCD8XSZA74OXoZCfZAwe7O1l8rDciQMFxAL0AZDZD",
@@ -32,7 +33,7 @@ function getFormattedDate() {
     min = (min < 10 ? "0" : "") + min;
     sec = (sec < 10 ? "0" : "") + sec;
 
-    return date.getFullYear() + "-" + month + "-" + day + " " +  hour + ":" + min + " " + sec +"s";
+    return date.getFullYear() + "-" + month + "-" + day + " " + hour + ":" + min + " " + sec + "s";
 };
 
 exports.start = workathon;
