@@ -12,6 +12,6 @@ new CronJob('0 11 17 * * *', function() {
     worker.start();
 }, function(){ console.log('finished cron')}
 
-, true, timeZone, null, false);
+, true, timeZone, null, true);
 
 // '0 0 */4 * * *'
